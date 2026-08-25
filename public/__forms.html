@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form definitions</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!--
+      Netlify detects forms by parsing deployed HTML at build time. The React
+      pages are statically exported and submit with fetch(), so the field
+      contract lives here where the deploy-time parser can always find it.
+    -->
+    <form name="trade-enquiry" data-netlify="true" netlify-honeypot="website" hidden>
+      <input type="hidden" name="form-name" value="trade-enquiry" />
+      <input name="reference" />
+      <input name="tradeType" />
+      <input name="material" />
+      <input name="market" />
+      <textarea name="description"></textarea>
+      <input name="volume" />
+      <input name="location" />
+      <input name="name" />
+      <input name="company" />
+      <input type="email" name="email" />
+      <input name="phone" />
+      <textarea name="notes"></textarea>
+      <input name="consent" />
+      <input name="sourcePage" />
+      <input name="referrer" />
+      <input name="website" />
+    </form>
+
+    <form name="quick-lead" data-netlify="true" netlify-honeypot="website" hidden>
+      <input type="hidden" name="form-name" value="quick-lead" />
+      <input name="reference" />
+      <input name="tradeType" />
+      <input name="material" />
+      <input name="contact" />
+      <input name="consent" />
+      <input name="sourcePage" />
+      <input name="referrer" />
+      <input name="website" />
+    </form>
+  </body>
+</html>
