@@ -75,7 +75,7 @@ export function QuickLeadForm() {
         <p>
           {state.autoOpened
             ? "WhatsApp is opening with your request ready — press send."
-            : "Send it to the trade desk on WhatsApp."}
+            : "Send it to our team on WhatsApp."}
         </p>
         <a
           className="quick-lead-whatsapp"

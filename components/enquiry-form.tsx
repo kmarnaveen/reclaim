@@ -118,12 +118,12 @@ export function EnquiryForm() {
     return (
       <div className="lead-success" role="status">
         <span>Enquiry received</span>
-        <h3>Your requirement is now with the Diyar e Taiba trade desk.</h3>
+        <h3>Your requirement is now with the Diyar e Taiba team.</h3>
         <p>
           Reference <strong>{submitState.reference}</strong>.{" "}
           {submitState.autoOpened
-            ? "WhatsApp is opening with your enquiry ready — press send to deliver it to the desk."
-            : "Send it straight to the desk on WhatsApp, or keep the reference ready for follow-up."}
+            ? "WhatsApp is opening with your enquiry ready — press send to deliver it to our team."
+            : "Send it straight to our team on WhatsApp, or keep the reference ready for follow-up."}
         </p>
         <div className="lead-success-actions">
           <a
@@ -225,7 +225,7 @@ export function EnquiryForm() {
       {submitState.status === "error" && <p className="form-error" role="alert">{submitState.message}</p>}
 
       <div className="enquiry-submit-row">
-        <p>Your enquiry is recorded, then handed to WhatsApp pre-filled so you can send it to the trade desk in one tap.</p>
+        <p>Your enquiry is recorded, then handed to WhatsApp pre-filled so you can send it to our team in one tap.</p>
         <button className="button button-cargo" type="submit" disabled={submitState.status === "submitting"}>
           {submitState.status === "submitting" ? "Submitting…" : "Submit trade enquiry"} <span>↗</span>
         </button>

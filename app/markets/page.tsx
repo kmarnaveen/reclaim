@@ -50,7 +50,7 @@ export default function MarketsPage() {
       <JsonLd data={serviceSchema} />
       <section className="page-hero">
         <p className="eyebrow"><span /> Market coverage</p>
-        <h1>Three regions.<br /><em>One trading desk.</em></h1>
+        <h1>Three regions.<br /><em>One trading partner.</em></h1>
         <div className="page-hero-bottom"><p>We connect scrap supply and industrial demand across India, Europe and the Middle East.</p><Link className="text-link" href="/contact">Discuss a trade lane <span>→</span></Link></div>
       </section>
       <section className="market-regions">

@@ -62,6 +62,7 @@ export default function RootLayout({
         name: "Diyar e Taiba",
         url: siteUrl,
         logo: `${siteUrl}/brand/diyar-e-taiba-logo.png`,
+        mainEntityOfPage: `${siteUrl}/about`,
         description: "B2B sourcing and supply of metal, rubber, textile and paper scrap across India, Europe and the Middle East.",
         address: {
           "@type": "PostalAddress",

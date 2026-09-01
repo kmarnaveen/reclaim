@@ -6,12 +6,12 @@ import { contact } from "./site";
  * The site is a static export, so it cannot send a message itself — that needs
  * the WhatsApp Business Cloud API and a server to hold the access token. What
  * we can do is compose the enquiry into a `wa.me` deep link addressed to the
- * trade desk, so the sender's own WhatsApp opens with the full enquiry ready
+ * team, so the sender's own WhatsApp opens with the full enquiry ready
  * and delivery costs them a single tap. The Netlify Forms record is written
  * first and independently, so an enquiry survives even if they never send.
  */
 
-/** Deep-link target for the desk. The first number is the primary line. */
+/** Deep-link target for the team. The first number is the primary line. */
 export const primaryNumber = contact.whatsapp[0];
 export const alternateNumber = contact.whatsapp[1];
 

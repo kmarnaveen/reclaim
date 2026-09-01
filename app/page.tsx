@@ -2,6 +2,7 @@ import Link from "next/link";
 import { frequentlyAskedQuestions } from "../lib/faqs";
 import { materialCategories } from "../lib/materials";
 import { QuickLeadForm } from "../components/quick-lead-form";
+import { contact, whatsappUrl, yearsInTrade } from "../lib/site";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
         <div className="quick-enquiry-copy">
           <p className="kicker">30-second callback request</p>
           <h2>Not ready with every detail?</h2>
-          <p>Share the material and one contact method. The trade desk can qualify the requirement with you.</p>
+          <p>Share the material and one contact method. Our team can qualify the requirement with you.</p>
         </div>
         <QuickLeadForm />
       </section>
@@ -115,7 +116,7 @@ export default function Home() {
         <div className="split-heading compact">
           <div>
             <p className="kicker">How we create value</p>
-            <h2>One desk.<br /><em>Both sides of the trade.</em></h2>
+            <h2>One team.<br /><em>Both sides of the trade.</em></h2>
           </div>
           <p>
             Have material to sell or a production requirement to fill? We organise
@@ -128,6 +129,58 @@ export default function Home() {
           <article><span>03</span><h3>Move</h3><p>We coordinate loading, inland transport, containers and trade documents.</p></article>
           <article><span>04</span><h3>Supply</h3><p>We match approved lots to mills, recyclers, processors and manufacturers.</p></article>
         </div>
+      </section>
+
+      <section className="home-about" id="about">
+        <div className="about-top">
+          <div>
+            <p className="kicker">Who we are</p>
+            <h2>A trading partner,<br /><em>not a marketplace.</em></h2>
+          </div>
+          <div className="about-copy">
+            <p>
+              Diyar e Taiba is a scrap materials trading business based in Golconda,
+              Hyderabad, active in the trade for the last {yearsInTrade}. We buy recovered
+              metal, rubber, textile and paper from yards, factories and aggregators, and
+              supply it to mills, recyclers and processors across India, Europe and the
+              Middle East.
+            </p>
+            <p>
+              We work as one team on both sides of a transaction. A single counterparty
+              stays accountable for grade, quantity, documentation and movement —
+              rather than a listing that leaves you to discover what actually arrives.
+            </p>
+            <div className="about-links">
+              <Link className="text-link" href="/materials">What we trade <span>→</span></Link>
+              <Link className="text-link" href="/locations">Where we trade <span>→</span></Link>
+              <Link className="text-link" href="/about">More about us <span>→</span></Link>
+            </div>
+          </div>
+        </div>
+        <dl className="about-facts">
+          <div>
+            <dt>Based</dt>
+            <dd>{contact.address.street}<br />{contact.address.locality}, {contact.address.region}</dd>
+          </div>
+          <div>
+            <dt>Categories</dt>
+            <dd>{materialCategories.map((category) => category.name.replace(" Scrap", "")).join(" · ")}</dd>
+          </div>
+          <div>
+            <dt>Markets</dt>
+            <dd>India · Europe · Middle East</dd>
+          </div>
+          <div>
+            <dt>Direct line</dt>
+            <dd>
+              {contact.whatsapp.map((line) => (
+                <a href={whatsappUrl(line.number)} key={line.number} rel="noopener noreferrer" target="_blank">
+                  {line.display}
+                </a>
+              ))}
+            </dd>
+          </div>
+        </dl>
       </section>
 
       <section className="home-proof">

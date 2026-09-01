@@ -223,6 +223,39 @@ h1, h2, h3, p { text-wrap: pretty; }
 .model-grid article > span { color: var(--gold-deep); font: italic var(--fs-400) Georgia, serif; }
 .model-grid h3 { margin: auto 0 12px; font-size: var(--fs-700); }
 .model-grid p { margin: 0; color: var(--muted); font-size: var(--fs-300); line-height: 1.65; }
+.about-page-intro { padding: 90px 4vw 0; }
+.about-page-intro .split-heading p { max-width: 560px; margin: 0 0 18px; color: var(--muted); font-size: var(--fs-400); line-height: 1.7; }
+.about-page-intro .split-heading p:last-child { margin-bottom: 0; }
+.about-page-intro .about-facts { margin-top: 60px; }
+.about-trade, .about-reach { padding: 90px 4vw 0; }
+.about-reach { padding-bottom: 90px; }
+.about-trade .area-material-grid { margin-top: 34px; }
+.about-reach-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
+.about-reach-grid a { min-height: 150px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; grid-template-rows: auto 1fr auto; gap: 10px; transition: background .2s ease, box-shadow .2s ease; }
+.about-reach-grid a:hover { background: var(--white); box-shadow: inset 3px 0 var(--cargo); }
+.about-reach-grid strong { font-size: var(--fs-500); letter-spacing: -.03em; }
+.about-reach-grid small { color: var(--muted); font-size: var(--fs-200); line-height: 1.55; }
+.about-reach-grid a > span { justify-self: end; align-self: end; color: var(--cargo); }
+
+/* About ---------------------------------------------------------------- */
+/* Deliberately NOT the 1.15fr/.85fr split that .home-proof uses immediately
+   below — two identical two-column sections back to back read as one block.
+   Heading and copy sit side by side, then the facts run as a full-width strip,
+   matching the grid language of .model-grid and .area-facts. */
+.home-about { padding: 0 4vw 105px; }
+.about-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: 9vw; align-items: end; }
+.about-top h2 { margin: 18px 0 0; font-size: var(--fs-1000); line-height: .9; letter-spacing: -.055em; font-weight: 500; }
+.about-top h2 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.about-copy > p { max-width: 520px; margin: 0 0 18px; color: var(--muted); font-size: var(--fs-400); line-height: 1.7; }
+.about-copy > p:last-of-type { margin-bottom: 0; }
+.about-links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 30px; }
+.about-facts { margin: 55px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
+.about-facts > div { min-height: 150px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+.about-facts dt { color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: var(--fs-100); font-weight: 700; }
+.about-facts dd { margin: auto 0 0; font-size: var(--fs-300); line-height: 1.5; }
+/* Padded so the phone links clear a comfortable tap target on touch. */
+.about-facts dd a { display: block; width: fit-content; padding: 5px 0; border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
+.about-facts dd a:hover { color: var(--cargo); border-color: var(--cargo); }
 .home-proof { padding: 0 4vw 105px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 8vw; align-items: center; }
 /* og.png is the 1200x630 share card; keep its native ratio so the baked-in
    logo and headline are never cropped. */
@@ -637,6 +670,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .region-list b { grid-column: 3; grid-row: 1 / 3; align-self: center; }
   .model-grid { grid-template-columns: 1fr 1fr; }
   .model-grid article { min-height: 235px; }
+  .about-page-intro { padding: 60px 5vw 0; }
+  .about-trade, .about-reach { padding: 60px 5vw 0; }
+  .about-reach { padding-bottom: 60px; }
+  .about-reach-grid { grid-template-columns: 1fr; }
+  .home-about { padding: 0 5vw 72px; }
+  .about-top { grid-template-columns: 1fr; gap: 30px; align-items: start; }
+  .about-facts { margin-top: 42px; grid-template-columns: 1fr 1fr; }
+  .about-facts > div { min-height: 120px; }
   .home-proof { padding: 0 5vw 72px; }
   .home-answers { padding: 0 5vw 72px; }
   .home-answer-grid { grid-template-columns: 1fr; }
@@ -740,6 +781,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 430px) {
   .model-grid { grid-template-columns: 1fr; }
   .footer-links { grid-template-columns: 1fr; }
+  .about-facts { grid-template-columns: 1fr; }
+  .about-facts > div { min-height: 0; }
   .area-material-grid, .area-related-grid { grid-template-columns: 1fr; }
   .cargo-manifest { grid-template-columns: 1fr; }
   .cargo-manifest > div { border-left: 0; border-top: 1px solid var(--line); }

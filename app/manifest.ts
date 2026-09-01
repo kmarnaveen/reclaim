@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Global B2B scrap sourcing and supply across India, Europe and the Middle East.",
     start_url: "/",
     display: "standalone",
-    background_color: "#eef3f1",
-    theme_color: "#005c65",
+    background_color: "#f1f2ec",
+    theme_color: "#17351b",
     icons: [
       {
         src: "/brand/diyar-e-taiba-mark.png",

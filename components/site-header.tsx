@@ -8,6 +8,7 @@ const navigation = [
   { href: "/markets", label: "Markets" },
   { href: "/locations", label: "Locations" },
   { href: "/quality", label: "Quality" },
+  { href: "/about", label: "About" },
   { href: "/faq", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
@@ -28,7 +29,7 @@ export function SiteHeader() {
       </div>
       <div className="header-main">
         <Link className="brand brand-logo-link" href="/" aria-label="Diyar e Taiba home">
-          <img className="brand-logo" src="/brand/diyar-e-taiba-logo.png" alt="Diyar e Taiba" width={1508} height={391} />
+          <img className="brand-logo" src="/brand/diyar-e-taiba-logo.png" alt="Diyar e Taiba" width={880} height={226} />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (

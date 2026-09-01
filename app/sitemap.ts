@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteUrl;
-  const routes = ["", "/materials", "/markets", "/quality", "/faq", "/contact", "/locations"];
+  const routes = ["", "/about", "/materials", "/markets", "/quality", "/faq", "/contact", "/locations"];
   const categoryRoutes = materialCategories.map((category) => `/materials/${category.slug}`);
   const areaRoutes = industrialAreas.map((area) => `/locations/${area.slug}`);
 
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       route === ""
         ? 1
-        : route === "/materials"
+        : route === "/materials" || route === "/about"
           ? 0.9
           : route.startsWith("/locations/")
             ? 0.5

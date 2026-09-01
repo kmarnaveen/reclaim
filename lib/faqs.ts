@@ -12,7 +12,7 @@ export const frequentlyAskedQuestions = [
   {
     question: "Which markets do you cover?",
     answer:
-      "The trade desk is positioned around India, Europe and the Middle East. A specific transaction is assessed against the actual origin, destination, buyer specification and applicable movement requirements.",
+      "We are positioned around India, Europe and the Middle East. A specific transaction is assessed against the actual origin, destination, buyer specification and applicable movement requirements.",
   },
   {
     question: "Can you handle recurring monthly scrap volumes?",

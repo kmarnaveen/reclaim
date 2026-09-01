@@ -30,6 +30,13 @@ export const contact = {
   ],
 } as const;
 
+/**
+ * How long the business has been trading, as a relative phrase rather than a
+ * founding date. Relative wording goes stale on its own — bump this one
+ * constant and every place that states it follows.
+ */
+export const yearsInTrade = "over two years";
+
 export const contactAddressLine = [
   contact.address.street,
   contact.address.locality,
